@@ -1,22 +1,29 @@
 
-public class prac5 {			
- 
-	public int string(String a, String b) { int count = 0;
+public class prac6 {
+public String[] wordsWithout(String[] words, String target) { 
+int found = 0;
 
-for (int i = 0; i < a.length() - 1; i++) {
-String a1 = a.substring(i, i + 2);
-String b1 = b.substring(i, i + 2);
-if (a1.equals(b1))
-count++;
+for (int i = 0; i < words.length; i++) { 
+if (words[i].equals(target))
+found++;
 }
-return count;
+found = words.length - found; 
+int place = 0;
 
-}
+String[] str = new String[found];
+for (int j = 0; j < words.length; j++) {
+if (!words[j].equals(target)) { str[place] = words[j];			
 
-public static void main(String[] args) {
-prac5 p5 = new prac5();
-// p5.stringMatch("xxcaazz", "xxaaz");
-
-System.out.println(p5.string("abc", "abc"));
-}
+ place++;			
+}			
+}			
+System.out.println(str);			
+return str;			
+}			
+public static void main(String[] args) {			
+prac6 p6=new prac6();			
+String[] s={"a","b","c","d"};			
+p6.wordsWithout(s, "a");			
+//System.out.println( p6.wordsWithout(s, "a"));			
+}			
 }			
