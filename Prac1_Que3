@@ -1,0 +1,34 @@
+Import java.util.Scanner;
+class HelloWorld {
+ static boolean convert(int s,int h)
+ {
+ int a,b;
+ a=s%10;
+ b=h%10;
+ if(a==b)
+ return true;
+ else
+ return false;
+ }
+ public static void 
+main(String[] args) {
+ 
+ 
+ int s,h;
+ Scanner sc= new 
+1 1,3,
+4,5
+7
+Scanner(System.in);
+ s= sc.nextInt();
+ h=sc.nextInt();
+ boolean 
+l=convert(s,h);
+ 
+System.out.print(l);
+ 
+//System.out.print(s[2]);
+ 
+ 
+ }
+}
